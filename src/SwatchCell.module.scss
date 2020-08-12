@@ -1,0 +1,34 @@
+.root {
+  box-sizing: border-box;
+  border: 1px solid rgba(0,0,0,.3);
+  box-shadow: 0 0 2px 0 white inset;
+  border-radius: 3px;
+  position: relative;
+  outline: none;
+}
+
+._selected {
+  box-shadow: 0 0 0 6px rgba(255,255,255, .8) inset;
+}
+
+._disabled {
+  opacity: .3;
+}
+
+._circular,
+._circular:focus::after {
+  border-radius: 9999px;
+}
+
+
+.root:focus::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  border:1px solid black;
+  box-shadow: 0 0 0 2px white inset;
+}
